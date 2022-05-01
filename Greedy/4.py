@@ -3,9 +3,26 @@
 # 단, 회의는 한번 시작하면 중간에 중단될 수 없으며 한 회의가 끝나는 것과 동시에 다음 회의가 시작될 수 있다. 
 # 회의의 시작시간과 끝나는 시간이 같을 수도 있다. 이 경우에는 시작하자마자 끝나는 것으로 생각하면 된다.
 
-a = int(input())
-data = (map(int,input().split()))
-print(data())
+n = int(input())
+room = []
+
+for i in range(n):
+    a, b = map(int, input().split())
+    room.append([a, b])
+
+room.sort(key = lambda x: x[0])
+room.sort(key = lambda x: x[1])
+
+cnt = 1
+end = room[0][1]
+for i in range(1, n):
+    if room[i][0] >= end:
+        cnt += 1
+        end = room[i][1]
+
+print(cnt)
+  
+
   
 
   
