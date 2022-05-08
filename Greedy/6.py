@@ -12,4 +12,4 @@ for i in a[1:]:
   for j in i.split('+'): # 그 뒤에 있는 수들을 +로 나누고 sum을 빼줌
     sum -= int(j)  
 
-print(sum)    
+print(sum)     
