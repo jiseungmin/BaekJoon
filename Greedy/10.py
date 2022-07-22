@@ -1,3 +1,4 @@
+#10162번 문제
 n = int(input())
 cities = list(map(int, input().split()))
 prices = list(map(int, input().split()))
